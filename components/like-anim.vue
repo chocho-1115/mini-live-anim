@@ -54,7 +54,8 @@
 				if (this.ctx && newVal - oldVal > 0 && this.likeImgList.length) {
 					// 自己点赞的时候，随机 1-3个气泡，im推送更新的时候，随机2-6个气泡
 					const count =
-						newVal - oldVal > 5 ? this.getRandomInt(2, 6) : this.getRandomInt(1, 3);
+						// newVal - oldVal > 5 ? this.getRandomInt(2, 6) : this.getRandomInt(1, 3);
+						Math.min(newVal - oldVal, 5);
 					this.likeClick(count);
 				}
 			}
