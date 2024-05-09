@@ -104,7 +104,7 @@
 			generatePathData() {
 			    const { realWidth, realHeight } = this;
 			    const p0 = {
-			      x: this.getRandom(0.6, 0.7) * realWidth,
+			      x: 0.5 * realWidth,
 			      y: realHeight,
 			    };
 			    const p1 = {
