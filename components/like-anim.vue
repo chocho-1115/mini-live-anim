@@ -77,24 +77,12 @@
 						canvas.height = this.realHeight * dpr;
 						this.ctx.scale(dpr, dpr);
 						
-						let k = 0;
 						for (let i = 0; i < 11; i++) {
 						  const likeImgae = canvas.createImage();
-						  likeImgae.src = `https://oss-magee.maijitv.com/maiji-mall/static/images/live/like-${i}.png`;
+						  likeImgae.src = `/static/images/live/like-${i}.png`;
 						  likeImgae.onload = () => {
 							this.likeImgList.push(likeImgae);
-							
-							
-							
-							k++
-							if(k==11) {
-								setTimeout(()=>{
-									console.log('=====')
-									this.likeClick(10)
-								},3000)
-							}
 						  };
-						  
 						}
 					  }
 					}
