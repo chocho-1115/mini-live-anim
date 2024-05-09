@@ -15,7 +15,16 @@ generatePathDataReverse函数需要去补充。
 
 #### 使用方法
 ``` html
-<like-anim :like="like" />
+<view class="like-box">
+    <like-anim :like="like" />
+</view>
+<style lang="scss" scoped>
+.like-box{
+    position:absolute;
+    pointer-events: none;
+    /* 定位在点赞按钮的位置 bottom:90%;left:50%;transform: translateX(-50%); */
+}
+</style>
 ```
 
 ``` javascript
@@ -23,3 +32,4 @@ import likeAnim from '@/components/like-anim.vue'
 ```
 
 like-anim组件会监听参数like的变化来触发动画，所以只需要在父组件给like一个增量即可。
+因小程序的代码体积限制，静态图片建议移至oss上。
