@@ -79,7 +79,7 @@
 						
 						for (let i = 0; i < 11; i++) {
 						  const likeImgae = canvas.createImage();
-						  likeImgae.src = `/static/images/live/like-${i}.png`;
+						  likeImgae.src = `/static/like-${i}.png`;
 						  likeImgae.onload = () => {
 							this.likeImgList.push(likeImgae);
 						  };
